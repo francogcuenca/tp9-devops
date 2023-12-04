@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tp8-devops
+spec:
+  selector:
+    app: tp8-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

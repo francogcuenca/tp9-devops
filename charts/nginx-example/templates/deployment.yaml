@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tp8-devops
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tp8-web
+  template:
+    metadata:
+      labels:
+        app: tp8-web
+    spec:
+      volumes:
+        - name: vol-img
+          persistentVolumeClaim:
+            claimName: img-pvc
+      containers:
+        - name: tp8-container
+          image: francogcuenca/tp8-web:1.5
+          ports:
+            - containerPort: 80
