@@ -16,7 +16,7 @@ spec:
       volumes:
         - name: vol-img
           persistentVolumeClaim:
-            claimName: img-pvc
+            claimName: img-pvc-1
       containers:
         - name: tp8-container
           image: francogcuenca/tp8-web:1.5
