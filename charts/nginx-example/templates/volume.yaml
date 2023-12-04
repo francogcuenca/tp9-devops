@@ -9,18 +9,3 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/home/imagenes"
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: img-vol
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
-  selector:
-    matchLabels:
-      type: img-vol
