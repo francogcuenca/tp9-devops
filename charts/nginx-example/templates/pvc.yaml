@@ -4,10 +4,11 @@ metadata:
   name: img-vol-1
 spec:
   accessModes:
-    - ReadWriteOnce
+    - {{ .Values.pvc.accessModes }}
   resources:
     requests:
-      storage: 1Gi
+      storage: {{ .Values.pvc.size }}
   selector:
     matchLabels:
-      type: img-vol
+      {{- toYaml .Values.pvc.selectorMatchLabels | nindent 6 }}
+

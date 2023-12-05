@@ -1,9 +1,13 @@
-apiVersion: v2  # Versión de la API de Helm que utiliza este archivo. Siempre debe ser v2 para Helm 3.x.
-name: tp9-devops  # Nombre del chart o proyecto.
-description: Intento de tp9  # Breve descripción del propósito del chart.
+apiVersion: v2
+name: tp9-devops
+description: Intento de tp9
 
-type: application  # Define si el chart es una aplicación o una librería.
+type: application
 
+<<<<<<< HEAD
 version: 0.1.3  # Versión del chart. Sigue las convenciones de versionado semántico.
+=======
+version: 0.1.1  # Versión del chart
+>>>>>>> 3730e2e (Segundo intento)
 
-appVersion: "1.0"  # Versión de la aplicación que se despliega. No sigue las reglas de versionado semántico.
+appVersion: "1.0"  # Versión de la aplicación

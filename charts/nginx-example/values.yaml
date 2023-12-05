@@ -1,67 +1,23 @@
-replicaCount: 1
-
-image:
-  repository: francogcuenca/tp8-web
-  pullPolicy: IfNotPresent
-  tag: "1.5"
-
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-
-serviceAccount:
-  create: true
-  annotations: {}
-  name: ""
-
-podAnnotations: {}
-
-podSecurityContext: {}
-
-securityContext: {}
-
-service:
-  type: NodePort
-  port: 80
-  targetPort: 80
-
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-  hosts:
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-
-resources: {}
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
-
-secretMessage:
-  create: true
-  message: "Hola, soy una nueva versión del Chart!"
-
-# Configuración específica para los recursos de tu carpeta 'templates'
 deployment:
-  enabled: true
-  replicas: 3 # Si deseas cambiar el número de réplicas
+  replicas: 3
   revisionHistoryLimit: 3
 
 service:
-  enabled: true
+  port: 80
+  targetPort: 80
+  type: NodePort
+
+pvc:
+  accessModes: ReadWriteOnce
+  size: 1Gi
+  selectorMatchLabels:
+    type: img-vol
 
 volume:
-  enabled: true
+  capacity: 1Gi
+  accessModes: ReadWriteOnce
+  hostPath: "/home/imagenes"
+
+image:
+  repository: francogcuenca/tp8-web
+  tag: "1.5"

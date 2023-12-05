@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: tp8-devops
 spec:
-  replicas: 3
-  revisionHistoryLimit: 3
+  replicas: {{ .Values.deployment.replicas }}
+  revisionHistoryLimit: {{ .Values.deployment.revisionHistoryLimit }}
   selector:
     matchLabels:
       app: tp8-web
@@ -19,6 +19,6 @@ spec:
             claimName: img-pvc-1
       containers:
         - name: tp8-container
-          image: francogcuenca/tp8-web:1.5
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 80
