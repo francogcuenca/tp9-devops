@@ -25,3 +25,5 @@ En este punto no tuve demasiados problemas, cree el workflow de la misma manera 
 En este último punto no tuve ningún problema, a excepción de que la aplicación no sincronizaba con el repositorio.
 Busque muchas fuentes en internet pero nada resolvía mi problema. Pasado un tiempo, decidi fijarme si el entorno de minikube tenia acceso a internet para poder sincronizar el repositorio y no lo tenia. Luego de reiniciar Docker y minikube, pude tener conectividad y todo funcionó!
 
+![Captura de Argo UI](Captura-argo.jpg)
+
