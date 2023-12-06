@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-tp9
+  namespace: argo-cd
+spec:
+  project: educacionit-devops
+  source:
+    chart: tp9-devops
+    repoURL: https://francogcuenca.github.io/tp9-devops
+    targetRevision: 0.1.3
+    helm:
+      releaseName: nginx-example
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: app-educacionit
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
