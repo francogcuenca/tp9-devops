@@ -4,6 +4,6 @@ description: Intento de tp9
 
 type: application
 
-version: 0.1.1  # Versión del chart
+version: 0.1.4  # Versión del chart
 
 appVersion: "1.0"  # Versión de la aplicación
