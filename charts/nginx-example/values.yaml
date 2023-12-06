@@ -20,4 +20,4 @@ volume:
 
 image:
   repository: francogcuenca/tp8-web
-  tag: "1.5"
+  tag: "1.6"
