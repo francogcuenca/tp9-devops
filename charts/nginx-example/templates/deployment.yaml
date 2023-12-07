@@ -16,7 +16,7 @@ spec:
       volumes:
         - name: vol-img
           persistentVolumeClaim:
-            claimName: img-pvc-1
+            claimName: img-vol-1
       containers:
         - name: tp8-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
