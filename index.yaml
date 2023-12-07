@@ -3,6 +3,16 @@ entries:
   tp9-devops:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2023-12-07T11:02:02.145659117Z"
+    description: Intento de tp9
+    digest: f531c7957de801938493903934a8675a7d6234ec57e4dce2df691c987595db6b
+    name: tp9-devops
+    type: application
+    urls:
+    - https://github.com/francogcuenca/tp9-devops/releases/download/tp9-devops-0.1.7/tp9-devops-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2023-12-06T19:18:43.940823027Z"
     description: Intento de tp9
     digest: 77adbc398f308bf2b27eb0a0ff64d9900c13c43baf38b3b66f2c43318d7b3882
@@ -61,4 +71,4 @@ entries:
     urls:
     - https://github.com/francogcuenca/tp9-devops/releases/download/tp9-devops-0.1.1/tp9-devops-0.1.1.tgz
     version: 0.1.1
-generated: "2023-12-06T19:18:43.94085111Z"
+generated: "2023-12-07T11:02:02.145689834Z"
